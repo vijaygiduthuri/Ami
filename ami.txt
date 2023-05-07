@@ -1,7 +1,22 @@
-=========================Amazon linux Ec2 user data=========================
+======================================================Amazon linux Ec2 user data==========================================================================
+                                                      --------------------------
 #!/bin/bash
 yum update -y
 yum install -y httpd
 systemctl start httpd
 systemctl enable httpd
 echo "hello vijay from $(hostname)" > /var/www/html/index.html
+
+===========================================================================================================================================================
+===========================================================( Ubuntu - webserver )==========================================================================
+                                                           ----------------------
+sudo apt-get update -y
+sudo su
+apt-get update
+apt-get install apache2 -y
+cd /var/www/html/
+---->>> do ( ls ) index.html <<<-----
+rm index.html ---->>> (or)  vi index.html --->>> Esc 100d --->>> to remove 100 lines in single time
+vi index.html ---->>> write your content here 
+:wq
+============================================================================================================================================================
