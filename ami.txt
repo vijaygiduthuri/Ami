@@ -6,7 +6,18 @@ yum install -y httpd
 systemctl start httpd
 systemctl enable httpd
 echo "hello vijay from $(hostname)" > /var/www/html/index.html
-
+               
+                                                                ( or )
+                                                                
+sudo yum update -y
+sudo -i
+yum install httpd -y
+service httpd start (or) systemctl start httpd                                  TO CHECK LOG DATA :     cd /var/log/httpd/
+servive httpd status                                                             ----------------       ll
+cd /var/www/html/                                                                                       tail -50f access_log  (displays last 50 logs data)
+vim index.html --->>> (write content here)
+:wq
+service httpd restart
 ===========================================================================================================================================================
 ===========================================================( Ubuntu - webserver )==========================================================================
                                                            ----------------------
